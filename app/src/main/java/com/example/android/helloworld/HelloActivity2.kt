@@ -9,11 +9,11 @@ class HelloActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hello)
-
-        val textview : TextView = findViewById<TextView>(R.id.txt_hello)
-        val intent : Intent = getIntent()
-        val msg : String? = intent.getStringExtra("name")
-//        textview.setText("Hello Androiddd"+msg)
+//
+//        val textview : TextView = findViewById<TextView>(R.id.textView2)
+//        val intent : Intent = getIntent()
+//        val msg : String? = intent.getStringExtra("name")
+//        textview.setText("Hello Android"+msg)
 
 
     }

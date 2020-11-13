@@ -14,31 +14,24 @@ class MainActivity : AppCompatActivity() {
 
         val username = findViewById<EditText>(R.id.edt_username)
         val password = findViewById<EditText>(R.id.edt_password)
-        val btnLogin = findViewById<Button>(R.id.btn_login)
-
-        btnLogin.setOnClickListener {
-            btnLogin.setOnClickListener {
-                if (username.toString().equals("admin")
-                        && password.text.toString().equals("admin")) {
-                    gotoHelloActivity2()
-                }else{
-                    loginfailed()
-                }//end of else
-            }
-        }//enf of setOnClickListener
-
-    }//end of OnCreate
-    fun gotoHelloActivity2() {
+        findViewById<Button>(R.id.btn_login).setOnClickListener { btnLogin() }
+    }
+    private  fun btnLogin(){
         val intent = Intent(this, HelloActivity2::class.java)
-        val username = findViewById<EditText>(R.id.edt_username)
-        intent.putExtra("name", username.toString())
         startActivity(intent)
-    }//end of gotoHelloActivity2
 
-    fun loginfailed(){
-        Toast.makeText(
-                applicationContext, "Wrong Credentials",
-                Toast.LENGTH_LONG
-        ).show()
+    }
+
+    //end of OnCreate
+
+//    fun gotoHelloActivity2() {
+//        val intent = Intent(this, HelloActivity2::class.java)
+//        val username = findViewById<EditText>(R.id.edt_username)
+//        intent.putExtra("name", username.toString())
+//        startActivity(intent)
+//    }//end of gotoHelloActivity2
+
+    private fun loginfailed(){
+        Toast.makeText(this, "Wrong Credentials", Toast.LENGTH_SHORT).show()
     }//end of loginfailed
 }//end of class
