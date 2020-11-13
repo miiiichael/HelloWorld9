@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.btn_login)
 
         btnLogin.setOnClickListener {
-
             btnLogin.setOnClickListener {
                 if (username.toString().equals("admin")
                         && password.text.toString().equals("admin")) {
@@ -26,7 +25,6 @@ class MainActivity : AppCompatActivity() {
                     loginfailed()
                 }//end of else
             }
-
         }//enf of setOnClickListener
 
     }//end of OnCreate
